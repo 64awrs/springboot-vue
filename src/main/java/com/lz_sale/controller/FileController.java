@@ -1,7 +1,7 @@
 package com.lz_sale.controller;
 
 import cn.hutool.core.io.FileUtil;
-import com.lz_sale.common.Result;
+import com.lz_sale.config.Result;
 import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,9 +12,7 @@ import java.io.IOException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
-/**
- * 文件相关操作接口
- */
+//文件
 @RestController
 @RequestMapping("/files")
 public class FileController {
@@ -25,9 +23,7 @@ public class FileController {
     @Value("${fileBaseUrl}")
     private String fileBaseUrl;
 
-    /**
-     * 文件上传
-     */
+    //文件上传
     @PostMapping("/upload")
     public Result upload(MultipartFile file) {
         // 定义文件的唯一标识
@@ -46,9 +42,7 @@ public class FileController {
         return Result.success(url);
     }
 
-    /**
-     * 文件下载
-     */
+    //文件下载
     @GetMapping("/download/{fileName}")
     public void download(@PathVariable String fileName, HttpServletResponse response) {
         // 设置下载文件http响应头

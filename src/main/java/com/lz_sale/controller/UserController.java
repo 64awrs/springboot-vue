@@ -1,6 +1,6 @@
 package com.lz_sale.controller;
 
-import com.lz_sale.common.Result;
+import com.lz_sale.config.Result;
 import com.lz_sale.entity.User;
 import com.lz_sale.service.UserService;
 import com.github.pagehelper.PageInfo;

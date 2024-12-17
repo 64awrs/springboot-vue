@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lz_sale.mapper.UserMapper">
 
-
+<!--动态sql，  -**/-->
     <select id="selectAll" resultType="com.lz_sale.entity.User">
         select * from user
         <where>

@@ -2,7 +2,7 @@ package com.lz_sale.exception;
 
 import cn.hutool.log.Log;
 import cn.hutool.log.LogFactory;
-import com.lz_sale.common.Result;
+import com.lz_sale.config.Result;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

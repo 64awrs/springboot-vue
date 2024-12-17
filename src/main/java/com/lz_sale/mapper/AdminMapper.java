@@ -6,38 +6,32 @@ import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
-/**
- * 操作admin相关数据接口
-*/
+
 public interface AdminMapper {
 
-    /**
-      * 新增
-    */
+
+    // 插入管理员信息
     int insert(Admin admin);
 
-    /**
-      * 删除
-    */
+
+    // 根据id删除管理员信息
     @Delete("delete from admin where id = #{id}")
     int deleteById(Integer id);
 
-    /**
-      * 修改
-    */
+
+    // 根据id更新管理员信息
     int updateById(Admin admin);
 
-    /**
-      * 根据ID查询
-    */
+
+    // 根据id查询管理员信息
     @Select("select * from admin where id = #{id}")
     Admin selectById(Integer id);
 
-    /**
-      * 查询所有
-    */
+
+    // 查询所有管理员信息
     List<Admin> selectAll(Admin admin);
 
+    // 根据用户名查询管理员信息
     @Select("select * from admin where username = #{username}")
     Admin selectByUsername(String username);
 

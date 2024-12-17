@@ -1,4 +1,4 @@
-package com.lz_sale.common;
+package com.lz_sale.config;
 
 public class Result {
     private String code;

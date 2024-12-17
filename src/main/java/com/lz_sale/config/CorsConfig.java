@@ -1,4 +1,4 @@
-package com.lz_sale.common;
+package com.lz_sale.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

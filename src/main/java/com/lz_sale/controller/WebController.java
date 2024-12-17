@@ -1,6 +1,6 @@
 package com.lz_sale.controller;
 
-import com.lz_sale.common.Result;
+import com.lz_sale.config.Result;
 import com.lz_sale.entity.Account;
 import com.lz_sale.entity.User;
 import com.lz_sale.service.AdminService;
@@ -18,17 +18,13 @@ public class WebController {
     private UserService userService;
 
 
-    /**
-     * 默认请求接口
-     */
+    //默认请求接口
     @GetMapping("/")
     public Result hello() {
         return Result.success();
     }
 
-    /**
-     * 登录
-     */
+    //登录
     @PostMapping("/login")
     public Result login(@RequestBody Account account) {
         Account ac = null;
@@ -40,18 +36,14 @@ public class WebController {
         return Result.success(ac);
     }
 
-    /**
-     * 注册
-     */
+    //注册
     @PostMapping("/register")
     public Result register(@RequestBody User user) {
         userService.register(user);
         return Result.success();
     }
 
-    /**
-     * 修改密码
-     */
+    //修改密码
     @PutMapping("/updatePassword")
     public Result updatePassword(@RequestBody Account account) {
         if ("ADMIN".equals(account.getRole())) {
